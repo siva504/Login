@@ -8,6 +8,74 @@
 
 <!-- //Directivess -->
 
+<!-- 1.Structural Direactives -->
+<!-- ngIF -->
 <h1 *ngIf="show">This is Directives</h1>
 
+<!-- ngFor -->
+<table border="1">
+    <thead>
+        <tr>
+            <th>Movies Names</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of movies">
+            <td>{{item}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br/><br/>
+<h1  *ngIf="!Data;then load; else name">Loading the Data....</h1>
+
+<ng-template #load>
+    Loading.....
+</ng-template>
+
+
+<ng-template #name>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Movies Names</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of Data">
+                <td>{{item}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</ng-template>
+
+<!-- ngfor with movies example -->
+
+<h1>Movies Name and which year released also Displaying</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Movies Names</th>
+            <th>Released Year</th>
+            <th>index</th>
+            <th>even</th>
+            <th>odd</th>
+            <th>first</th>
+            <th>last</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of MoviesName;index as i;even as e;odd as o;first as f;last as l">
+            <td>{{movie.name}}</td>
+            <td>{{movie.year}}</td>
+            <td>{{i}}</td>
+            <td>{{e}}</td>
+            <td>{{o}}</td>
+            <td>{{f}}</td>
+            <td>{{l}}</td>
+        </tr>
+    </tbody>
+</table>
 <router-outlet />
