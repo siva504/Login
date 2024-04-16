@@ -7,12 +7,12 @@ import { FormsModule } from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { DirectivesComponent } from './directives/directives.component';
-import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { UserLoginComponent } from './user-login/user-login.component'; 
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
