@@ -1,0 +1,188 @@
+
+<label>City:</label>
+<input type="text" [(ngModel)]="city" />
+
+<h1>{{city}}</h1>
+
+<button (click)="updateCity()">Submit</button>
+
+
+<!-- //Directivess -->
+
+<!-- 1.Structural Direactives -->
+<!-- ngIF -->
+<h1 *ngIf="show">This is Directives</h1>
+
+<!-- ngFor -->
+<table border="1">
+    <thead>
+        <tr>
+            <th>Movies Names</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of movies">
+            <td>{{item}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br/><br/>
+<h1  *ngIf="!Data;then load; else name">Loading the Data....</h1>
+
+<ng-template #load>
+    Loading.....
+</ng-template>
+
+
+<ng-template #name>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Movies Names</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of Data">
+                <td>{{item}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</ng-template>
+
+<!-- ngfor with movies example -->
+
+<h1>Movies Name and which year released also Displaying</h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Movies Names</th>
+            <th>Released Year</th>
+            <th>index</th>
+            <th>even</th>
+            <th>odd</th>
+            <th>first</th>
+            <th>last</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of MoviesName;index as i;even as e;odd as o;first as f;last as l">
+            <td>{{movie.name}}</td>
+            <td>{{movie.year}}</td>
+            <td>{{i}}</td>
+            <td>{{e}}</td>
+            <td>{{o}}</td>
+            <td>{{f}}</td>
+            <td>{{l}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>This is new movie and image also</h1>
+<!-- 
+<table  border="1">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Rated</th>
+            <th>Released</th>
+            <th>Runtime</th>
+            <th>Genre</th>
+            <th>Director</th>
+            <th>Writer</th>
+            <th>Actors</th>
+            <th>Plot</th>
+            <th>Language</th>
+            <th>Country</th>
+            <th>Awards</th>
+            <th>Poster</th>
+            <th>Metascore</th>
+            <th>imdbRating</th>
+            <th>imdbVotes</th>
+            <th>imdbID</th>
+            <th>Type</th>
+            <th>Response</th>
+            <th>Images</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of OriginalMovie">
+            <td>{{movie.Title}}</td>
+            <td>{{movie.Year}}</td>
+            <td>{{movie.Rated}}</td>
+            <td>{{movie.Released}}</td>
+            <td>{{movie.Runtime}}</td>
+            <td>{{movie.Genre}}</td>
+            <td>{{movie.Director}}</td>
+            <td>{{movie.Writer}}</td>
+            <td>{{movie.Actors}}</td>
+            <td>{{movie.Plot}}</td>
+            <td>{{movie.Language}}</td>
+            <td>{{movie.Country}}</td>
+            <td>{{movie.Awards}}</td>
+            <td><img [src]="movie.Poster" alt="Movie poster" width="100"></td>
+            <td>{{movie.Metascore}}</td>
+            <td>{{movie.imdbRating}}</td>
+            <td>{{movie.imdbVotes}}</td>
+            <td>{{movie.imdbID}}</td>
+            <td>{{movie.Type}}</td>
+            <td>{{movie.Response}}</td>
+            <td><img [src]="movie.Images" alt="Movie poster" width="100"></td>
+        </tr>
+    </tbody>
+</table> -->
+
+<table matSort border="1">
+    <tr>
+    <th mat-sort-header="Title">Title</th>
+    <th mat-sort-header="Year">Year</th>
+    <th mat-sort-header="Rated">Rated</th>
+    <th mat-sort-header="Released">Released</th>
+    <th mat-sort-header="Runtime">Runtime</th>
+    <th mat-sort-header="Genre">Genre</th>
+    <th mat-sort-header="Director">Director</th>
+    <th mat-sort-header="Writer">Writer</th>
+    <th mat-sort-header="Actors">Actors</th>
+    <th mat-sort-header="Plot">Plot</th>
+    <th mat-sort-header="Language">Language</th>
+    <th mat-sort-header="Country">Country</th>
+    <th mat-sort-header="Awards">Awards</th>
+    <th mat-sort-header="Poster">Poster</th>
+    <th mat-sort-header="Metascore">Metascore</th>
+    <th mat-sort-header="imdbRating">imdbRating</th>
+    <th mat-sort-header="imdbVotes">imdbVotes</th>
+    <th mat-sort-header="imdbID">imdbID</th>
+    <th mat-sort-header="type">Type</th>
+    <th mat-sort-header="Response">Response</th>
+    <th mat-sort-header="Images">Images</th>
+    </tr>
+  
+    <tr *ngFor="let movie of OriginalMovie">
+        <td>{{movie.Title}}</td>
+        <td>{{movie.Year}}</td>
+        <td>{{movie.Rated}}</td>
+        <td>{{movie.Released}}</td>
+        <td>{{movie.Runtime}}</td>
+        <td>{{movie.Genre}}</td>
+        <td>{{movie.Director}}</td>
+        <td>{{movie.Writer}}</td>
+        <td>{{movie.Actors}}</td>
+        <td>{{movie.Plot}}</td>
+        <td>{{movie.Language}}</td>
+        <td>{{movie.Country}}</td>
+        <td>{{movie.Awards}}</td>
+        <td><img [src]="movie.Poster" alt="Movie poster" width="100"></td>
+        <td>{{movie.Metascore}}</td>
+        <td>{{movie.imdbRating}}</td>
+        <td>{{movie.imdbVotes}}</td>
+        <td>{{movie.imdbID}}</td>
+        <td>{{movie.Type}}</td>
+        <td>{{movie.Response}}</td>
+        <td><img [src]="movie.Images" alt="Movie poster" width="100"></td>
+    </tr>
+  </table>
+
+<!-- ngSwitch for directives for the angular JS -->
