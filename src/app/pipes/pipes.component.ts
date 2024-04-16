@@ -35,5 +35,6 @@ export class PipesComponent {
       return 'just now';
     }
   }
-
+  wish="Welcome to custom pipes topic";
+  newConcept="exclamation";
 }

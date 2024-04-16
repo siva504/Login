@@ -13,13 +13,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { UserLoginComponent } from './user-login/user-login.component'; 
 import { MatTabsModule } from '@angular/material/tabs';
+import { TestPipe } from './test.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PipesComponent,
     DirectivesComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    TestPipe
   ],
   imports: [
     BrowserModule,
