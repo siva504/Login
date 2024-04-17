@@ -37,4 +37,12 @@ export class PipesComponent {
   }
   wish="Welcome to custom pipes topic";
   newConcept="exclamation";
+
+
+  email="";
+
+  updateEmail(ip: { value: string; }){
+    this.email=ip.value;
+  }
+
 }

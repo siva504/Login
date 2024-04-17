@@ -11,3 +11,10 @@
 <!-- <h1>{{wish | test }}</h1> -->
 
 <h1>{{newConcept | test }}</h1>
+
+
+<input type="text" placeholder="Enter Your Email" #e  value="xyz@gmail.com"/>
+
+<button (click)="updateEmail(e)">Update</button>
+
+<h1>{{e.value}}</h1>
