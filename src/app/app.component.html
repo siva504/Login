@@ -1,6 +1,9 @@
 <mat-tab-group mat-align-tabs="center" > 
-    <mat-tab label="pipes"><app-pipes></app-pipes></mat-tab> 
+    <mat-tab label="pipes"><app-pipes [childtitle]="News" ></app-pipes></mat-tab> 
     <mat-tab label="directives"><app-directives></app-directives></mat-tab> 
     <mat-tab label="userLogin"><app-user-login></app-user-login></mat-tab>
 </mat-tab-group>
+
+ <!-- <div>{{title}}</div>
+<app-pipes [childtitle]="name"></app-pipes> -->
 <router-outlet />

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-pipes',
@@ -45,4 +46,11 @@ export class PipesComponent {
     this.email=ip.value;
   }
 
+  @Input()
+  childtitle: string='';
+
+  constructor(){}
+
+
+  // @Output() customEvent = new EventEmitter()
 }
