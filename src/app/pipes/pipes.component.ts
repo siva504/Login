@@ -49,6 +49,8 @@ export class PipesComponent {
   @Input()
   childtitle: string='';
 
+  names: string = '';
+
   constructor(){}
 
 

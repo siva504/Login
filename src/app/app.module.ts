@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { UserLoginComponent } from './user-login/user-login.component'; 
 import { MatTabsModule } from '@angular/material/tabs';
 import { TestPipe } from './test.pipe';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TestPipe } from './test.pipe';
     PipesComponent,
     DirectivesComponent,
     UserLoginComponent,
-    TestPipe
+    TestPipe,
+    LifecycleHooksComponent
   ],
   imports: [
     BrowserModule,

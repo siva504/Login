@@ -1,0 +1,12 @@
+div {
+    margin: 20px;
+  }
+  input {
+    padding: 10px;
+    font-size: 16px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
