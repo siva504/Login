@@ -1,1 +1,16 @@
 <p>lifecycle-hooks works!</p>
+
+<div [ngStyle]="{'text-align':'center'}">
+    <h1>concept of ngonchanges</h1>
+    <app-ng-onchages [inputValue]="input"></app-ng-onchages>
+
+    <button (click)="generateNumber()">GenrateRandomnumber</button>
+</div>
+
+<div [ngStyle]="{'text-align':'center'}" >
+    <app-ng-oninit></app-ng-oninit>
+</div>
+
+<div [ngStyle]="{'text-align':'center'}" >
+    <app-ng-docheck></app-ng-docheck>
+</div>

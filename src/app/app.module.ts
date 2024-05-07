@@ -15,6 +15,9 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { TestPipe } from './test.pipe';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { NgOnchagesComponent } from './ng-onchages/ng-onchages.component';
+import { NgOninitComponent } from './ng-oninit/ng-oninit.component';
+import { NgDocheckComponent } from './ng-docheck/ng-docheck.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.compo
     DirectivesComponent,
     UserLoginComponent,
     TestPipe,
-    LifecycleHooksComponent
+    LifecycleHooksComponent,
+    NgOnchagesComponent,
+    NgOninitComponent,
+    NgDocheckComponent
   ],
   imports: [
     BrowserModule,

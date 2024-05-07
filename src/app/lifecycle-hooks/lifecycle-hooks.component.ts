@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './lifecycle-hooks.component.css'
 })
 export class LifecycleHooksComponent {
-
+  input=121;
+  generateNumber(){
+    this.input=Math.floor(Math.random() *100);
+  }
 }
