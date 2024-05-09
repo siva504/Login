@@ -19,6 +19,8 @@ import { NgOnchagesComponent } from './ng-onchages/ng-onchages.component';
 import { NgOninitComponent } from './ng-oninit/ng-oninit.component';
 import { NgDocheckComponent } from './ng-docheck/ng-docheck.component';
 import { NgAftercontentinitComponent } from './ng-aftercontentinit/ng-aftercontentinit.component';
+import { HttpClientRequestComponent } from './http-client-request/http-client-request.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { NgAftercontentinitComponent } from './ng-aftercontentinit/ng-afterconte
     NgOnchagesComponent,
     NgOninitComponent,
     NgDocheckComponent,
-    NgAftercontentinitComponent
+    NgAftercontentinitComponent,
+    HttpClientRequestComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { NgAftercontentinitComponent } from './ng-aftercontentinit/ng-afterconte
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(),
