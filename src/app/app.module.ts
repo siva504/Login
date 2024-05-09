@@ -18,6 +18,7 @@ import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.compo
 import { NgOnchagesComponent } from './ng-onchages/ng-onchages.component';
 import { NgOninitComponent } from './ng-oninit/ng-oninit.component';
 import { NgDocheckComponent } from './ng-docheck/ng-docheck.component';
+import { NgAftercontentinitComponent } from './ng-aftercontentinit/ng-aftercontentinit.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NgDocheckComponent } from './ng-docheck/ng-docheck.component';
     LifecycleHooksComponent,
     NgOnchagesComponent,
     NgOninitComponent,
-    NgDocheckComponent
+    NgDocheckComponent,
+    NgAftercontentinitComponent
   ],
   imports: [
     BrowserModule,

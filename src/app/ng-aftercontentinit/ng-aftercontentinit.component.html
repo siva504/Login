@@ -1,0 +1,20 @@
+<p>ng-aftercontentinit works!</p>
+
+
+<div class="container">
+    <div class="input-group">
+      <input type="number" [(ngModel)]="num1" placeholder="Enter first number">
+      <select [(ngModel)]="selectedOperation">
+        <option value="add">Addition (+)</option>
+        <option value="subtract">Subtraction (-)</option>
+        <option value="multiply">Multiplication (*)</option>
+        <option value="divide">Division (/)</option>
+      </select>
+      <input type="number" [(ngModel)]="num2" placeholder="Enter second number">
+    </div>
+    <button (click)="calculate()">Calculate</button>
+    <p class="result" *ngIf="result !== undefined">Result: {{ result }}</p>
+    <p class="error" *ngIf="result === undefined">Please select a valid operation</p>
+  </div>
+  
+  
